@@ -1,0 +1,98 @@
+.about {
+    position: relative;
+    margin-bottom: 13rem;
+
+    @media #{$lg} {
+        margin-bottom: 8rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 69.5rem;
+        height: 61rem;
+        background: url(../images/svg/pattern.svg) no-repeat;
+        background-size: contain;
+        z-index: -1;
+        top: 3.5rem;
+        right: 5.5rem;
+
+        @media #{$lg} {
+            content: none;
+        }
+    }
+
+    &__content {
+        h2 {
+            font-weight: 600;
+            font-size: 3rem;
+            color: $color-primary;
+            margin: 0 0 3rem;
+
+            @media #{$lg} {
+                font-size: 2rem;
+                line-height: 2.5rem;
+                margin: 0 0 2.3rem;
+            }
+
+            span {
+                font-weight: 600;
+                font-size: 3rem;
+                color: $color-active;
+
+                @media #{$lg} {
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                }
+            }
+        }
+
+        h3 {
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 2.2rem;
+            margin: 6rem 0 3rem;
+
+            @media #{$lg} {
+                font-size: 1.8rem;
+                line-height: 2.2rem;
+                margin: 4rem 0 2rem;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            color: $color-primary;
+            margin-bottom: 2rem;
+
+            @media #{$lg} {
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        ul {
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+
+            @media #{$lg} {
+                margin-bottom: 1rem;
+            }
+            
+            li {
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 3rem;
+                color: $color-primary;
+
+                @media #{$lg} {
+                    font-size: 1.4rem;
+                    line-height: 1.8rem;
+                }
+            }
+        }
+    }
+}

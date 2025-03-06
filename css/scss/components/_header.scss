@@ -1,0 +1,172 @@
+.header {
+    position: fixed;
+    width: 100%;
+    height: 9.2rem;
+    background-color: rgba($color: #010C11, $alpha: 0.9);
+    backdrop-filter: blur(0.5rem);
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    @media #{$lg} {
+        height: 6.7rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: none;
+        width: 34.7rem;
+        height: 1px;
+        background: linear-gradient(90deg, rgba($color: #fff, $alpha: 0) 0%, #81b3ca 25%, #fff 50%, #81b3ca 75%, rgba($color: #fff, $alpha: 0) 100%);;
+        pointer-events: none;
+        transition: all .1s linear;
+        transform: translate(-50%, 50%);
+        left: 50%;
+        bottom: 0;
+
+        @media #{$lg} {
+            display: initial;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: none;
+        pointer-events: none;
+        width: 12.5rem;
+        height: 2.5rem;
+        background-color: #5898B6;
+        transition: all .1s linear;
+        border-radius: 50%;
+        filter: blur(2rem);
+        transform: translate(-50%, 50%);
+        left: 50%;
+        bottom: 0;
+
+        @media #{$lg} {
+            display: initial;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: calc(100% - 0.5rem);
+        padding-top: 0.5rem;
+
+        @media #{$lg} {
+            height: 100%;
+            padding-top: 0;
+        }
+    }
+
+    &__burger-btn {
+        display: none;
+
+        @media #{$lg} {
+            display: flex;
+            width: 2.6rem;
+            height: 0.9rem;
+            background-color: transparent;
+            padding: 0;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    &__city {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        cursor: pointer;
+        top: 0.5rem;
+        left: 0;
+
+        @media #{$lg} {
+            display: none;
+        }
+
+        &:hover {
+            svg {
+                path {
+                    fill: $color-active;
+                }
+            }
+
+            p {
+                color: $color-active;
+            }
+        }
+
+        svg {
+            width: 0.9rem;
+            height: 0.5rem;
+
+            path {
+                transition: all .1s linear;
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #2C4A58;
+            transition: all .1s linear;
+        }
+    }
+
+    &__logo {
+        width: 23rem;
+        height: max-content;
+        margin-top: 0.5rem;
+
+        @media #{$lg} {
+            width: 17.5rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &__menu {
+        @media #{$lg} {
+            display: none;
+        }
+    }
+
+    &__socials {
+        @media #{$lg} {
+            display: none;
+        }
+    }
+
+    &__phone {
+        .phone {
+            &__tel {
+                font-size: 1.8rem;
+                line-height: 1.8rem;
+
+                @media #{$lg} {
+                    display: none;
+                }
+            }
+
+            &__order {
+                @media #{$lg} {
+                    content: url(../images/svg/phone-active.svg);
+                    width: 2rem;
+                    height: 2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.articles {
+    margin-bottom: 6rem;
+
+    @media #{$lg} {
+        margin-bottom: 5rem;
+    }
+}

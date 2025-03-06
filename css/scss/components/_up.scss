@@ -1,0 +1,34 @@
+.up {
+    position: fixed;
+    width: 5.6rem;
+    height: 5.6rem;
+    transition: all .1s linear;
+    cursor: pointer;
+    z-index: 100;
+    right: 1rem;
+    bottom: 2rem;
+
+    @media #{$lg} {
+        display: none;
+    }
+
+    &-invisible {
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+            path {
+                fill: $color-active;
+            }
+        }
+
+        path {
+            transition: all .1s linear;
+        }
+    }
+}

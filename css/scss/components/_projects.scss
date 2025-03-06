@@ -1,0 +1,11 @@
+.projects {
+    margin-bottom: 12rem;
+
+    @media #{$lg} {
+        margin-bottom: 5rem;
+    }
+
+    .list {
+        background-color: #EEF3F9;
+    }
+}

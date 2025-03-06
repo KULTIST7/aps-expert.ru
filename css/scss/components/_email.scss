@@ -1,0 +1,13 @@
+.email {
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: $color-active-tertiary;
+    display: flex;
+    transition: all .1s linear;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-active;
+    }
+}

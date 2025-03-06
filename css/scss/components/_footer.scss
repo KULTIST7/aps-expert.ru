@@ -1,0 +1,199 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    background: url(../images/footer-bg.jpg) no-repeat center top;
+    background-size: cover;
+
+    @media #{$lg} {
+        gap: 2rem;
+        background: url(../images/footer-bg-mob.jpg) no-repeat center top;
+        background-size: cover;
+    }
+
+    &__top {
+        position: relative;
+        height: 6.6rem;
+        background-color: rgba($color: #031017, $alpha: 0.8);
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: none;
+            width: 34.7rem;
+            height: 1px;
+            background: linear-gradient(90deg, rgba($color: #fff, $alpha: 0) 0%, #81b3ca 25%, #fff 50%, #81b3ca 75%, rgba($color: #fff, $alpha: 0) 100%);;
+            pointer-events: none;
+            transition: all .1s linear;
+            transform: translate(-50%, 50%);
+            left: 50%;
+            bottom: 0;
+    
+            @media #{$lg} {
+                display: initial;
+            }
+        }
+    
+        &::after {
+            content: '';
+            position: absolute;
+            display: none;
+            pointer-events: none;
+            width: 12.5rem;
+            height: 2.5rem;
+            background-color: #5898B6;
+            transition: all .1s linear;
+            border-radius: 50%;
+            filter: blur(2rem);
+            transform: translate(-50%, 50%);
+            left: 50%;
+            bottom: 0;
+    
+            @media #{$lg} {
+                display: initial;
+            }
+        }
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        &__info {
+            display: flex;
+            align-items: center;
+            gap: 9rem;
+
+            @media #{$lg} {
+                justify-content: space-between;
+                gap: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    &__menu {
+        @media #{$lg} {
+            display: none;
+        }
+
+        ul {
+            gap: 7rem;
+        }
+
+        &_mob {
+            display: none;
+
+            @media #{$lg} {
+                display: initial;
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 1.2rem;
+                margin-bottom: 4.5rem;
+
+                li {
+                    a {
+                        &::before, &::after {
+                            content: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__email {
+        @media #{$lg} {
+            display: none;
+        }
+
+        &_mob {
+            display: none;
+            margin-bottom: 2rem;
+
+            @media #{$lg} {
+                display: flex;
+            }
+        }
+    }
+
+    &>.section-box {
+        position: relative;
+    }
+
+    &__content {
+        max-width: 62rem;
+        padding-bottom: 2.8rem;
+    }
+
+    &__logo {
+        display: flex;
+        width: 43.2rem;
+        height: auto;
+        margin-bottom: 10.5rem;
+
+        @media #{$lg} {
+            width: 23rem;
+            margin-bottom: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &__warning {
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: #103B4F;
+        margin: 0 0 2.5rem;
+
+        @media #{$lg} {
+            font-size: 1.4rem;
+            margin: 0 0 1.5rem;
+        }
+    }
+
+    &__privacy-policy {
+        margin: 0;
+
+        @media #{$lg} {
+            max-width: 22rem;
+        }
+
+        &, a {
+            font-weight: 400;
+            font-size: 1.4rem;
+            color: #103B4F;
+        }
+
+        a {
+            transition: all .1s linear;
+
+            &:hover {
+                color: $color-active;
+            }
+        }
+    }
+
+    &__luxar {
+        position: absolute;
+        width: 12rem;
+        height: 8.5rem;
+        right: 0;
+        bottom: 1.2rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.socials {
+    display: flex;
+    gap: 2rem;
+
+    &__item {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+
+        @media #{$lg} {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        &:hover {
+            &::before {
+                opacity: 0;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+
+            svg {
+                path:not(:has(+ path)) {
+                    fill: $color-active;
+                }
+
+                path + path {
+                    stroke: $color-active;
+                    fill: none;
+                }
+
+                path:has(+ path) {
+                    stroke: $color-active;
+                }
+            }
+        }
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: all .1s linear;
+            top: 0;
+            left: 0;
+        }
+
+        &::before {
+            opacity: 1;
+        }
+
+        &::after {
+            opacity: 0;
+        }
+
+        &__tg {
+            &::before {
+                background: url(../images/svg/tg.svg) no-repeat center;
+                background-size: contain;
+            }
+
+            &::after {
+                background: url(../images/svg/tg-active.svg) no-repeat center;
+                background-size: contain;
+            }
+        }
+
+        &__wa {
+            &::before {
+                background: url(../images/svg/wa.svg) no-repeat center;
+                background-size: contain;
+            }
+
+            &::after {
+                background: url(../images/svg/wa-active.svg) no-repeat center;
+                background-size: contain;
+            }
+        }
+
+        &__skype {
+            &::before {
+                background: url(../images/svg/skype.svg) no-repeat center;
+                background-size: contain;
+            }
+
+            &::after {
+                background: url(../images/svg/skype-active.svg) no-repeat center;
+                background-size: contain;
+            }
+        }
+
+        svg {
+            path, rect {
+                transition: all .1s linear;
+            }
+        }
+    }
+}

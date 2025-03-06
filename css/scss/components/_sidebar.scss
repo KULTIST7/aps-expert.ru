@@ -1,0 +1,78 @@
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    background-color: rgba($color: #010C11, $alpha: 0.5);
+    padding: 2.5rem 1.8rem;
+    border-radius: 1rem 3rem;
+    z-index: 100;
+    top: 16.4rem;
+    right: 1rem;
+
+    @media #{$lg} {
+        display: none;
+    }
+
+    &__item {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+
+        &:hover {
+            svg {
+                path:not(:has(+ path)) {
+                    fill: $color-active;
+                }
+
+                path + path {
+                    stroke: $color-active;
+                    fill: none;
+                }
+
+                path:has(+ path) {
+                    stroke: $color-active;
+                }
+            }
+
+            &::after {
+                box-shadow: 0 0.4rem 0.4rem 0 rgba($color: #000, $alpha: 0.25);
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 6.4rem;
+            height: 1px;
+            rotate: -30deg;
+            background: linear-gradient(90deg, rgba($color: #fff, $alpha: 0) 0%, #87AEC0 50%, rgba($color: #fff, $alpha: 0) 100%);
+            transform: translateX(-60%);
+            transition: all .1s linear;
+            left: 50%;
+            bottom: 0;
+        }
+
+        svg {
+            path {
+                transition: all .1s linear;
+            }
+        }
+
+        &:last-of-type {
+            &::after {
+                content: none;
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: none;
+                        stroke: $color-active;
+                    }
+                }
+            }
+        }
+    }
+}
