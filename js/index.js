@@ -192,4 +192,12 @@ $(document).ready(function () {
         $('.about__collapse').slideDown(500);
         $(this).addClass('invisible');
     });
+
+    $('.search-open').on('click', function () {
+        $('.search').toggleClass('invisible');
+    });
+
+    $('.search__close').on('click', function () {
+        $('.search').addClass('invisible');
+    });
 });
