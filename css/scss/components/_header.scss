@@ -18,7 +18,7 @@
         display: none;
         width: 34.7rem;
         height: 1px;
-        background: linear-gradient(90deg, rgba($color: #fff, $alpha: 0) 0%, #81b3ca 25%, #fff 50%, #81b3ca 75%, rgba($color: #fff, $alpha: 0) 100%);;
+        background: linear-gradient(90deg, rgba($color: #fff, $alpha: 0) 20%, #81b3ca 45%, #e5f7ff 50%, #81b3ca 55%, rgba($color: #fff, $alpha: 0) 80%);
         pointer-events: none;
         transition: all .1s linear;
         transform: translate(-50%, 50%);
@@ -37,7 +37,7 @@
         pointer-events: none;
         width: 12.5rem;
         height: 2.5rem;
-        background-color: #5898B6;
+        background-color: rgba($color: #5898B6, $alpha: 0.5);
         transition: all .1s linear;
         border-radius: 50%;
         filter: blur(2rem);
@@ -148,7 +148,18 @@
         }
     }
 
+    &__controls {
+        .socials__item {
+            @media #{$lg} {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+
     &__phone {
+        gap: 0;
+
         .phone {
             &__tel {
                 font-size: 1.8rem;

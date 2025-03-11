@@ -14,6 +14,7 @@
     }
 
     &__content {
+        position: relative;
         width: 100%;
         height: max-content;
         background-color: rgba($color: #010A0F, $alpha: 0.3);
@@ -21,6 +22,33 @@
         box-sizing: border-box;
         padding: 2.7rem 1.4rem 1.5rem;
         border-radius: 5rem;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(90deg, rgba($color: #fff, $alpha: 0) 50%, #81b3ca 60%, #e5f7ff 65%, #81b3ca 70%, rgba($color: #fff, $alpha: 0) 80%);
+        border-image-slice: 1;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 11rem;
+            height: 2.5rem;
+            background-color: #5898B6;
+            border-radius: 50%;
+            filter: blur(4rem);
+            pointer-events: none;
+        }
+
+        &::before {
+            transform: translateY(-50%);
+            top: 0;
+            right: 9.5rem;
+        }
+
+        &::after {
+            transform: translateY(50%);
+            bottom: 0;
+            right: 9.5rem;
+        }
     }
 
     &__form {

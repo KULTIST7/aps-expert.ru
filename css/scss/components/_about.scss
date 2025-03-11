@@ -95,4 +95,26 @@
             }
         }
     }
+
+    &__collapse {
+        @media #{$lg} {
+            display: none;
+        }
+
+        &-btn {
+            font-size: 1.4rem;
+            text-decoration: none;
+            display: none;
+            transition: all .1s linear;
+
+            @media #{$lg} {
+                display: initial;
+            }
+
+            &.invisible {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+    }
 }

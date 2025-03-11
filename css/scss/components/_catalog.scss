@@ -131,6 +131,16 @@
                 display: none;
             }
 
+            &:hover {
+                p {
+                    filter: brightness(1.2);
+
+                    &::before {
+                        rotate: 45deg;
+                    }
+                }
+            }
+
             p {
                 position: relative;
                 font-weight: 500;
@@ -139,6 +149,7 @@
                 color: $color-active;
                 padding-right: 3rem;
                 margin: 0;
+                transition: all .1s linear;
 
                 &::before {
                     content: '';
@@ -147,6 +158,7 @@
                     height: 2rem;
                     background: url(../images/svg/all-arrow.svg) no-repeat;
                     background-size: contain;
+                    transition: all .1s linear;
                     top: 0;
                     right: 0;
                 }

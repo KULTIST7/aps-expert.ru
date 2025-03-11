@@ -127,11 +127,12 @@
             height: 5.6rem;
             background-color: rgba($color: #000E14, $alpha: 0.4);
             backdrop-filter: blur(0.25rem);
-            padding: 0 2rem;
+            padding: 0 0 0 2rem;
             border-radius: 5.6rem;
 
             @media #{$lg} {
                 width: 100%;
+                padding: 0 2rem;
             }
         }
     }
@@ -150,9 +151,15 @@
             font-size: 1.4rem;
             line-height: 1.4rem;
             color: #fff;
+            width: 1.3rem;
+
+            @media #{$lg} {
+                width: auto;
+            }
         }
 
-        &__element {
+        &__element.swiper-horizontal > .swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite {
+            position: relative;
             width: 18.5rem;
             height: 0.2rem;
             background-color: #466675;
@@ -162,8 +169,9 @@
                 width: 100%;
             }
 
-            &>div {
+            &>span {
                 background: linear-gradient(90deg, $color-active, $color-active-secondary);
+                border-radius: 0.2rem;
             }
         }
     }
@@ -178,19 +186,33 @@
 
         &__prev, &__next {
             position: relative;
-            width: 0.6rem;
-            height: 1.3rem;
-            background: url(../images/svg/slider-arrow-active.svg) no-repeat;
+            width: 4.3rem;
+            height: 5rem;
             cursor: pointer;
 
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0.7rem;
+                height: 1.3rem;
+                background: url(../images/svg/slider-arrow-active.svg) no-repeat center;
+                background-size: contain;
+                transform: translateY(-50%);
+                top: 50%;
+            }
+
             &.swiper-button-disabled {
-                background: url(../images/svg/slider-arrow.svg) no-repeat;
-                cursor: default;
+                &::after {
+                    background: url(../images/svg/slider-arrow.svg) no-repeat center;
+                    background-size: contain;
+                    cursor: default;
+                }
             }
         }
 
         &__prev {
             rotate: 180deg;
+            right: 0;
 
             &::before {
                 content: '';
@@ -200,9 +222,13 @@
                 background: linear-gradient(0deg, rgba($color: #fff, $alpha: 0) 0%, #6391A6 50%, rgba($color: #fff, $alpha: 0) 100%);
                 rotate: 30deg;
                 transform: translateY(-50%);
-                top: 0.2rem;
+                top: 2rem;
                 left: -3.2rem;
             }
+        }
+
+        &__next {
+            left: 0;
         }
     }
 }

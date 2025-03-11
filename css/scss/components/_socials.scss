@@ -1,5 +1,6 @@
 .socials {
     display: flex;
+    align-items: center;
     gap: 2rem;
 
     &__item {
@@ -68,6 +69,12 @@
         }
 
         &__wa {
+            height: 2.2rem;
+
+            @media #{$lg} {
+                height: 2.75rem;
+            }
+
             &::before {
                 background: url(../images/svg/wa.svg) no-repeat center;
                 background-size: contain;

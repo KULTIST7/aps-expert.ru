@@ -57,13 +57,15 @@ $(document).ready(function () {
     });
 
     const mainSlider = new Swiper('.slider>.swiper', {
+        effect: 'fade',
         speed: 500,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true
         },
-        scrollbar: {
+        pagination: {
+            type: 'progressbar',
             el: '.slider .slider__scrollbar__element'
         },
         navigation: {
@@ -184,5 +186,10 @@ $(document).ready(function () {
                 slidesPerView: 2
             }
         }
+    });
+
+    $('.about__collapse-btn_open').on('click', function () {
+        $('.about__collapse').slideDown(500);
+        $(this).addClass('invisible');
     });
 });

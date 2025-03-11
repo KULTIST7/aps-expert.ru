@@ -35,10 +35,6 @@
                     stroke: $color-active;
                 }
             }
-
-            &::after {
-                box-shadow: 0 0.4rem 0.4rem 0 rgba($color: #000, $alpha: 0.25);
-            }
         }
 
         &::after {
@@ -47,7 +43,7 @@
             width: 6.4rem;
             height: 1px;
             rotate: -30deg;
-            background: linear-gradient(90deg, rgba($color: #fff, $alpha: 0) 0%, #87AEC0 50%, rgba($color: #fff, $alpha: 0) 100%);
+            background: linear-gradient(90deg, rgba($color: #fff, $alpha: 0) 20%, #87AEC0 50%, rgba($color: #fff, $alpha: 0) 80%);
             transform: translateX(-60%);
             transition: all .1s linear;
             left: 50%;

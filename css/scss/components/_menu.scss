@@ -32,7 +32,7 @@
                     position: absolute;
                     width: 32rem;
                     height: 1px;
-                    background: linear-gradient(90deg, rgba($color: #fff, $alpha: 0) 0%, #81b3ca 25%, #e5f7ff 50%, #81b3ca 75%, rgba($color: #fff, $alpha: 0) 100%);;
+                    background: linear-gradient(90deg, rgba($color: #fff, $alpha: 0) 20%, #81b3ca 45%, #e5f7ff 50%, #81b3ca 55%, rgba($color: #fff, $alpha: 0) 80%);
                     pointer-events: none;
                     opacity: 0;
                     transition: all .1s linear;
