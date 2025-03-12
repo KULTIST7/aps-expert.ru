@@ -200,4 +200,74 @@ $(document).ready(function () {
     $('.search__close').on('click', function () {
         $('.search').addClass('invisible');
     });
+
+    let isDeopDownBtnHover = false;
+    let isDropDownMenuHover = false;
+
+    $('.drop-down-menu__btn').on('mouseenter', function () {
+        isDeopDownBtnHover = true;
+        $('.drop-down-menu').slideDown(500);
+    });
+
+    $('.drop-down-menu__btn').on('mouseleave', function () {
+        isDeopDownBtnHover = false;
+        setTimeout(() => {
+            if (!isDropDownMenuHover) {
+                $('.drop-down-menu').slideUp(500);
+            }
+        }, 10);
+    });
+
+    $('.drop-down-menu').on('mouseenter', function () {
+        isDropDownMenuHover = true;
+    });
+
+    $('.drop-down-menu').on('mouseleave', function () {
+        isDropDownMenuHover = false;
+        setTimeout(() => {
+            if (!isDeopDownBtnHover) {
+                $('.drop-down-menu').slideUp(500);
+            }
+        }, 10);
+    });
+
+    $('.drop-down-menu__catalog>ul>li>a').on('mouseenter', function () {
+        $('.drop-down-menu__catalog>ul>li>a').removeClass('active');
+        $(this).addClass('active');
+
+        let catalogId = $(this).data('id');
+
+        $('.drop-down-menu__category>ul').each(function () {
+            if ($(this).data('id') === catalogId) {
+                $('.drop-down-menu__category>ul').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+
+        let categoryId = $('.drop-down-menu__category>ul.active>li>a.active').data('id');
+
+        $('.drop-down-menu__item').each(function () {
+            let finalId = catalogId + '-' + categoryId;
+            if ($(this).data('id') === finalId) {
+                $('.drop-down-menu__item').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+    });
+
+    $('.drop-down-menu__category>ul>li>a').on('mouseenter', function () {
+        $('.drop-down-menu__category>ul.active>li>a').removeClass('active');
+        $(this).addClass('active');
+
+        let catalogId = $('.drop-down-menu__catalog>ul>li>a.active').data('id');
+        let categoryId = $(this).data('id');
+
+        $('.drop-down-menu__item').each(function () {
+            let finalId = catalogId + '-' + categoryId;
+            if ($(this).data('id') === finalId) {
+                $('.drop-down-menu__item').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+    });
 });

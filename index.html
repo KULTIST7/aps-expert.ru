@@ -32,7 +32,7 @@
             </a>
             <nav class="menu header__menu">
                 <ul>
-                    <li><a href="javascript:void(0)">Каталог</a></li>
+                    <li><a href="javascript:void(0)" class="drop-down-menu__btn">Каталог</a></li>
                     <li><a href="javascript:void(0)">Производители</a></li>
                     <li><a href="javascript:void(0)">Реализованные проекты</a></li>
                     <li><a href="javascript:void(0)">Контакты</a></li>
@@ -119,6 +119,248 @@
                     </svg>                                 
                 </button>
             </form>
+        </div>
+    </div>
+    <div class="drop-down-menu">
+        <div class="drop-down-menu__content">
+            <nav class="drop-down-menu__catalog">
+                <ul>
+                    <li><a data-id="catalog-1" href="javascript:void(0)" class="active">Автоматизация</a></li>
+                    <li><a data-id="catalog-2" href="javascript:void(0)">Аксессуары</a></li>
+                    <li><a data-id="catalog-3" href="javascript:void(0)">Горелки</a></li>
+                    <li><a data-id="catalog-4" href="javascript:void(0)">Материалы для сварки</a></li>
+                    <li><a data-id="catalog-5" href="javascript:void(0)">Плазменная резка</a></li>
+                    <li><a data-id="catalog-6" href="javascript:void(0)">Сварочные аппараты</a></li>
+                    <li><a data-id="catalog-7" href="javascript:void(0)">Аксессуары для систем индукционного нагрева</a></li>
+                    <li><a data-id="catalog-8" href="javascript:void(0)">Источники индукционного нагрева</a></li>
+                </ul>
+            </nav>
+            <nav class="drop-down-menu__category">
+                <ul data-id="catalog-1" class="active">
+                    <li><a data-id="category-1" href="javascript:void(0)" class="active">Вращатели</a></li>
+                    <li><a data-id="category-2" href="javascript:void(0)">Колонны</a></li>
+                    <li><a data-id="category-3" href="javascript:void(0)">Позиционеры</a></li>
+                    <li><a data-id="category-4" href="javascript:void(0)">Системы рециркуляции флюса</a></li>
+                </ul>
+                <ul data-id="catalog-2">
+                    <li><a data-id="category-1" href="javascript:void(0)" class="active">Блоки водяного охлаждения</a></li>
+                    <li><a data-id="category-2" href="javascript:void(0)">Запчасти для сварочного оборудования</a></li>
+                    <li><a data-id="category-3" href="javascript:void(0)">Кабеля</a></li>
+                    <li><a data-id="category-4" href="javascript:void(0)">Клеммы заземления</a></li>
+                    <li><a data-id="category-5" href="javascript:void(0)">Разъемы для сварочных аппаратов</a></li>
+                    <li><a data-id="category-6" href="javascript:void(0)">Электрододержатели</a></li>
+                </ul>
+                <ul data-id="catalog-3">
+                    <li><a data-id="category-1" href="javascript:void(0)" class="active">Горелки для аргонодуговой сварки TIG</a></li>
+                    <li><a data-id="category-2" href="javascript:void(0)">Горелки для полуавтомата MIG/MAG</a></li>
+                    <li><a data-id="category-3" href="javascript:void(0)">Расходные материалы для горелок TIG</a></li>
+                    <li><a data-id="category-4" href="javascript:void(0)">Расходные материалы горелок для полуавтоматов (MIG)</a></li>
+                </ul>
+                <ul data-id="catalog-4">
+                    <li><a data-id="category-1" href="javascript:void(0)" class="active">Сварочная проволока</a></li>
+                    <li><a data-id="category-2" href="javascript:void(0)">Сварочные электроды</a></li>
+                </ul>
+                <ul data-id="catalog-5">
+                    <li><a data-id="category-1" href="javascript:void(0)" class="active">Аппараты для плазменной резки CUT</a></li>
+                    <li><a data-id="category-2" href="javascript:void(0)">Запчасти для плазмотронов</a></li>
+                    <li><a data-id="category-3" href="javascript:void(0)">Плазмотроны</a></li>
+                </ul>
+                <ul data-id="catalog-6">
+                    <li><a data-id="category-1" href="javascript:void(0)" class="active">Аргонодуговой сварки TIG</a></li>
+                    <li><a data-id="category-2" href="javascript:void(0)">Выпрямители</a></li>
+                    <li><a data-id="category-3" href="javascript:void(0)">Инверторы</a></li>
+                    <li><a data-id="category-4" href="javascript:void(0)">Полуавтомат (MIG/MAG)</a></li>
+                    <li><a data-id="category-5" href="javascript:void(0)">Ручная дуговая сварка</a></li>
+                    <li><a data-id="category-6" href="javascript:void(0)">Сварка под флюсом</a></li>
+                    <li><a data-id="category-7" href="javascript:void(0)">Сварочные агрегаты</a></li>
+                </ul>
+                <ul data-id="catalog-7"></ul>
+                <ul data-id="catalog-8"></ul>
+            </nav>
+            <div class="drop-down-menu__info">
+                <div data-id="catalog-1-category-1" class="drop-down-menu__item active">
+                    <h3>Вращатели</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-1-category-2" class="drop-down-menu__item">
+                    <h3>Колонны</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-1-category-3" class="drop-down-menu__item">
+                    <h3>Позиционеры</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-1-category-4" class="drop-down-menu__item">
+                    <h3>Системы рециркуляции флюса</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Системы рециркуляции флюса — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-2-category-1" class="drop-down-menu__item">
+                    <h3>Блоки водяного охлаждения</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-2-category-2" class="drop-down-menu__item">
+                    <h3>Запчасти для сварочного оборудования</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-2-category-3" class="drop-down-menu__item">
+                    <h3>Кабеля</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-2-category-4" class="drop-down-menu__item">
+                    <h3>Клеммы заземления</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-2-category-5" class="drop-down-menu__item">
+                    <h3>Разъемы для сварочных аппаратов</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-2-category-6" class="drop-down-menu__item">
+                    <h3>Электрододержатели</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-3-category-1" class="drop-down-menu__item">
+                    <h3>Горелки для аргонодуговой сварки TIG</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-3-category-2" class="drop-down-menu__item">
+                    <h3>Горелки для полуавтомата MIG/MAG</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-3-category-3" class="drop-down-menu__item">
+                    <h3>Расходные материалы для горелок TIG</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-3-category-4" class="drop-down-menu__item">
+                    <h3>Расходные материалы горелок для полуавтоматов (MIG)</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-4-category-1" class="drop-down-menu__item">
+                    <h3>Сварочная проволока</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-4-category-2" class="drop-down-menu__item">
+                    <h3>Сварочные электроды</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-5-category-1" class="drop-down-menu__item">
+                    <h3>Аппараты для плазменной резки CUT</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-5-category-2" class="drop-down-menu__item">
+                    <h3>Запчасти для плазмотронов</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-5-category-3" class="drop-down-menu__item">
+                    <h3>Плазмотроны</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-6-category-1" class="drop-down-menu__item">
+                    <h3>Аргонодуговой сварки TIG</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-6-category-2" class="drop-down-menu__item">
+                    <h3>Выпрямители</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-6-category-3" class="drop-down-menu__item">
+                    <h3>Инверторы</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-6-category-4" class="drop-down-menu__item">
+                    <h3>Полуавтомат (MIG/MAG)</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-6-category-5" class="drop-down-menu__item">
+                    <h3>Ручная дуговая сварка</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-6-category-6" class="drop-down-menu__item">
+                    <h3>Сварка под флюсом</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+                <div data-id="catalog-6-category-7" class="drop-down-menu__item">
+                    <h3>Сварочные агрегаты</h3>
+                    <div class="drop-down-menu__item__image">
+                        <img src="images/drop-down-menu-img-1.png" alt="">
+                    </div>
+                    <p>Электрододержатель — это приспособление для закрепления электрода и подвода к нему сварочного тока во время ручной дуговой сварки</p>
+                </div>
+            </div>
         </div>
     </div>
     <main>
