@@ -313,6 +313,7 @@ $(document).ready(function () {
         $(this).addClass('active');
 
         $('.header__city>p').text($(this).text());
+        $('.burger__city>p').text($(this).text());
     });
 
     $('.city__all-cities__content>ul>li>a').on('click', function () {
@@ -321,5 +322,55 @@ $(document).ready(function () {
         $(this).addClass('active');
 
         $('.header__city>p').text($(this).text());
+        $('.burger__city>p').text($(this).text());
+    });
+
+    $('.burger__menu>ul>li.more').on('click', function () {
+        $('.burger__menu').addClass('invisible');
+        $('.burger__city').addClass('invisible');
+        $('.burger__city-select').addClass('invisible');
+        $('.burger__menu-more').removeClass('invisible');
+    });
+
+    $('.burger__menu-more__back').on('click', function () {
+        $('.burger__menu').removeClass('invisible');
+        $('.burger__city').removeClass('invisible');
+        $('.burger__city-select').addClass('invisible');
+        $('.burger__menu-more').addClass('invisible');
+    });
+
+    $('.burger__city').on('click', function () {
+        $('.burger__city-select').removeClass('invisible');
+        $('.burger__city').addClass('invisible');
+        $('.burger__menu').addClass('invisible');
+        $('.burger__menu-more').addClass('invisible');
+    });
+
+    $('.burger__city-select__main-cities>li>a').on('click', function () {
+        $('.burger__city-select__main-cities>li>a').removeClass('active');
+        $('.burger__city-select__all-cities>ul>li>a').removeClass('active');
+        $(this).addClass('active');
+
+        $('.burger__menu').removeClass('invisible');
+        $('.burger__city').removeClass('invisible');
+        $('.burger__city-select').addClass('invisible');
+        $('.burger__menu-more').addClass('invisible');
+
+        $('.header__city>p').text($(this).text());
+        $('.burger__city>p').text($(this).text());
+    });
+
+    $('.burger__city-select__all-cities>ul>li>a').on('click', function () {
+        $('.burger__city-select__main-cities>li>a').removeClass('active');
+        $('.burger__city-select__all-cities>ul>li>a').removeClass('active');
+        $(this).addClass('active');
+
+        $('.burger__menu').removeClass('invisible');
+        $('.burger__city').removeClass('invisible');
+        $('.burger__city-select').addClass('invisible');
+        $('.burger__menu-more').addClass('invisible');
+
+        $('.header__city>p').text($(this).text());
+        $('.burger__city>p').text($(this).text());
     });
 });

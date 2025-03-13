@@ -10,7 +10,7 @@
     left: 0;
 
     @media #{$lg} {
-        display: none;
+        display: none !important;
     }
 
     &__content {
@@ -187,6 +187,7 @@
                 line-height: 2.5rem;
                 text-transform: uppercase;
                 color: $color-active;
+                margin: 0;
             }
 
             li {

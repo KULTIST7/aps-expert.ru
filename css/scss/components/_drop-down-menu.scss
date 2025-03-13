@@ -10,7 +10,7 @@
     left: 0;
 
     @media #{$lg} {
-        display: none;
+        display: none !important;
     }
 
     &__content {
