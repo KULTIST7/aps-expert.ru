@@ -233,6 +233,10 @@
             padding: 0 1rem;
             z-index: 2;
 
+            @media #{$lg} {
+                padding: 0;
+            }
+
             &>div {
                 position: relative;
                 flex-basis: 0;
@@ -264,6 +268,7 @@
             margin: 0 1rem;
 
             @media #{$lg} {
+                width: 100%;
                 margin: 0;
             }
 

@@ -1960,6 +1960,11 @@ body a {
   padding: 0 1rem;
   z-index: 2;
 }
+@media (max-width: 992px) {
+  .products__item__slices {
+    padding: 0;
+  }
+}
 .products__item__slices > div {
   position: relative;
   flex-basis: 0;
@@ -1986,6 +1991,7 @@ body a {
 }
 @media (max-width: 992px) {
   .products__item__scrollbar {
+    width: 100%;
     margin: 0;
   }
 }
