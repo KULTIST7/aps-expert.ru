@@ -195,6 +195,8 @@ $(document).ready(function () {
 
     $('.search-open').on('click', function () {
         $('.search').toggleClass('invisible');
+        $('.header__city').removeClass('active');
+        $('.city').slideUp(250);
     });
 
     $('.search__close').on('click', function () {
@@ -206,14 +208,17 @@ $(document).ready(function () {
 
     $('.drop-down-menu__btn').on('mouseenter', function () {
         isDeopDownBtnHover = true;
-        $('.drop-down-menu').slideDown(500);
+        $('.drop-down-menu').slideDown(250);
+        $('.search').addClass('invisible');
+        $('.header__city').removeClass('active');
+        $('.city').slideUp(250);
     });
 
     $('.drop-down-menu__btn').on('mouseleave', function () {
         isDeopDownBtnHover = false;
         setTimeout(() => {
             if (!isDropDownMenuHover) {
-                $('.drop-down-menu').slideUp(500);
+                $('.drop-down-menu').slideUp(250);
             }
         }, 10);
     });
@@ -226,7 +231,7 @@ $(document).ready(function () {
         isDropDownMenuHover = false;
         setTimeout(() => {
             if (!isDeopDownBtnHover) {
-                $('.drop-down-menu').slideUp(500);
+                $('.drop-down-menu').slideUp(250);
             }
         }, 10);
     });
@@ -269,5 +274,52 @@ $(document).ready(function () {
                 $(this).addClass('active');
             }
         });
+    });
+
+    $('.header__city').on('click', function () {
+        $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')) {
+            $('.city').slideDown(250);
+        } else {
+            $('.city').slideUp(250);
+        }
+
+        $('.search').addClass('invisible');
+    });
+
+    isHeaderHover = false;
+
+    $('.header').on('mouseenter', function () {
+        isHeaderHover = true;
+    });
+
+    $('.header').on('mouseleave', function () {
+        isHeaderHover = false;
+    });
+
+    $('.city').on('mouseleave', function () {
+        setTimeout(() => {
+            if (!isHeaderHover) {
+                $('.city').slideUp(250);
+                $('.header__city').removeClass('active');
+            }
+        }, 10);
+    });
+
+    $('.city__main-cities>ul>li>a').on('click', function () {
+        $('.city__main-cities>ul>li>a').removeClass('active');
+        $('.city__all-cities__content>ul>li>a').removeClass('active');
+        $(this).addClass('active');
+
+        $('.header__city>p').text($(this).text());
+    });
+
+    $('.city__all-cities__content>ul>li>a').on('click', function () {
+        $('.city__main-cities>ul>li>a').removeClass('active');
+        $('.city__all-cities__content>ul>li>a').removeClass('active');
+        $(this).addClass('active');
+
+        $('.header__city>p').text($(this).text());
     });
 });

@@ -91,7 +91,7 @@
             display: none;
         }
 
-        &:hover {
+        &.active, &:hover {
             svg {
                 path {
                     fill: $color-active;
@@ -100,6 +100,12 @@
 
             p {
                 color: $color-active;
+            }
+        }
+
+        &.active {
+            svg {
+                rotate: 180deg;
             }
         }
 

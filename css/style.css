@@ -964,11 +964,14 @@ body a {
     display: none;
   }
 }
-.header__city:hover svg path {
+.header__city.active svg path, .header__city:hover svg path {
   fill: #FFAE00;
 }
-.header__city:hover p {
+.header__city.active p, .header__city:hover p {
   color: #FFAE00;
+}
+.header__city.active svg {
+  rotate: 180deg;
 }
 .header__city svg {
   width: 0.9rem;
@@ -3079,4 +3082,191 @@ body a {
   line-height: 1.5rem;
   color: #C4D9E2;
   margin: 0;
+}
+
+.city {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 8, 12, 0.9);
+  backdrop-filter: blur(0.5rem);
+  z-index: 100;
+  top: 9.2rem;
+  left: 0;
+}
+@media (max-width: 992px) {
+  .city {
+    display: none;
+  }
+}
+.city__content {
+  display: flex;
+  flex-direction: column;
+  padding: 4.5rem 0 14rem;
+}
+.city__content h2 {
+  font-weight: 400;
+  font-size: 3rem;
+  color: #fff;
+  margin: 0 0 3rem;
+}
+.city form {
+  margin-bottom: 4.5rem;
+}
+.city__search {
+  position: relative;
+  max-width: 120rem;
+  width: 100%;
+  border-radius: 3rem;
+}
+.city__search::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: url(../images/svg/search-gray.svg) no-repeat center;
+  background-size: contain;
+  transform: translateY(-50%);
+  pointer-events: none;
+  top: 50%;
+  left: 2.5rem;
+}
+.city__search::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  padding: 1px;
+  border-radius: 3.2rem 0 0 3.2rem;
+  background: linear-gradient(90deg, #225168, transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.city__search input {
+  font-size: 1.6rem;
+  color: #fff;
+  width: 100%;
+  height: 4.8rem;
+  background-color: transparent;
+  padding-left: 6rem;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+.city__search input::placeholder {
+  color: #fff;
+}
+.city__info {
+  display: flex;
+  padding-left: 6rem;
+}
+.city__main-cities {
+  position: relative;
+  padding-right: 8rem;
+  margin-right: 7.5rem;
+}
+.city__main-cities::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: calc(100% + 1.5rem);
+  background: linear-gradient(0deg, transparent, #005177, transparent);
+  top: -1.5rem;
+  right: 0;
+}
+.city__main-cities ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: max-content;
+  list-style: none;
+  padding-left: 0;
+}
+.city__main-cities ul li {
+  width: 100%;
+}
+.city__main-cities ul li a {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-decoration: none;
+  color: #5EA7C9;
+  display: flex;
+  width: 100%;
+  transition: all 0.1s linear;
+}
+.city__main-cities ul li a.active, .city__main-cities ul li a:hover {
+  font-weight: 600;
+  color: #FFAE00;
+}
+.city__all-cities {
+  position: relative;
+  max-height: 29rem;
+}
+.city__all-cities::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: calc(100% + 1.5rem);
+  background: linear-gradient(0deg, transparent, #005177, transparent);
+  z-index: -1;
+  top: -1.5rem;
+  right: 0.2rem;
+}
+.city__all-cities__content {
+  height: 100%;
+  padding-right: 8rem;
+  overflow-y: scroll;
+}
+.city__all-cities__content::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.city__all-cities__content::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.city__all-cities__content::-webkit-scrollbar-thumb {
+  width: 0.5rem;
+  background-color: #FFAE00;
+  border-radius: 10rem;
+}
+.city__all-cities ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  max-width: 20rem;
+  width: max-content;
+  padding-left: 0;
+  margin-bottom: 2.5rem;
+}
+.city__all-cities ul:last-of-type {
+  margin-bottom: 0;
+}
+.city__all-cities ul h3 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  color: #FFAE00;
+}
+.city__all-cities ul li {
+  width: 100%;
+}
+.city__all-cities ul li a {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  width: 100%;
+  transition: all 0.1s linear;
+}
+.city__all-cities ul li a.active, .city__all-cities ul li a:hover {
+  color: #FFAE00;
 }/*# sourceMappingURL=style.css.map */
