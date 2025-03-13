@@ -41,11 +41,24 @@
 
         &__content {
             display: flex;
-            height: 100%;
+            height: calc(100% + 0.2rem);
 
             @media #{$lg} {
                 overflow: scroll hidden;
                 padding-right: 8.5rem;
+            }
+
+            &::-webkit-scrollbar {
+                height: 0.2rem;
+
+                &-track {
+                    background-color: transparent;    
+                }
+
+                &-thumb {
+                    background-color: $color-secondary;
+                    border-radius: 10rem;
+                }
             }
         }
 
