@@ -268,7 +268,7 @@ $(document).ready(function () {
         });
     }
 
-    if ($('.products').length) {
+    if ($('.products').length || $('.category').length) {
         $('.products__filter__item').on('click', function () {
             $('.products__filter__item').each(function () {
                 $(this).removeClass('active');
