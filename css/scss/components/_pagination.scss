@@ -1,0 +1,122 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+    height: 5rem;
+
+    @media #{$lg} {
+        height: 4.5rem;
+    }
+
+    &__more, &__num {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 0.5rem 2.5rem;
+    }
+
+    &__more {
+        justify-content: center;
+        flex-grow: 1;
+        gap: 1.6rem;
+        cursor: pointer;
+
+        &:hover {
+            p {
+                color: $color-active;
+            }
+
+            svg {
+                path {
+                    fill: $color-active;
+                }
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 1.4rem;
+            color: #91A2AB;
+            margin: 0;
+            transition: all .1s linear;
+
+            span {
+                font-weight: 400;
+                font-size: 1.4rem;
+                color: $color-active;
+            }
+        }
+
+        svg {
+            width: 1.6rem;
+            height: 1.6rem;
+
+            path {
+                transition: all .1s linear;
+            }
+        }
+    }
+
+    &__num {
+        justify-content: space-between;
+        width: 31.5%;
+        box-sizing: border-box;
+
+        @media #{$lg} {
+            display: none;
+        }
+
+        .num-inner {
+            display: flex;
+            
+            a {
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+                text-decoration: none;
+                color: $color-secondary;
+                display: flex;
+                justify-content: center;
+                width: 2.8rem;
+                height: 2.8rem;
+                border-radius: 50%;
+                transition: all .1s linear;
+
+                &:hover {
+                    color: $color-active;
+                }
+
+                &.cur {
+                    color: #000;
+                    background-color: rgba($color: #285167, $alpha: 0.2);
+                }
+            }
+
+            .point_sep {
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+                color: $color-secondary;
+                margin: 0 0.8rem;
+            }
+        }
+    }
+
+    &__prev, &__next {
+        width: 0.6rem;
+        height: 1.1rem;
+        background: url(../images/svg/burger-more-arrow.svg) no-repeat center;
+        background-size: contain;
+        padding: 0 2.7rem;
+
+        &.disabled {
+            opacity: 0.3;
+            cursor: default;
+        }
+    }
+
+    &__prev {
+        transform: rotateY(180deg);
+    }
+}

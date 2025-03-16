@@ -237,7 +237,7 @@
                 padding: 0;
             }
 
-            &>div {
+            &>a {
                 position: relative;
                 flex-basis: 0;
                 flex-grow: 1;
@@ -362,6 +362,7 @@
             padding: 0 1.8rem;
             border-radius: 0.4rem 2rem;
             transition: all .1s linear;
+            z-index: 3;
 
             &:hover {
                 animation: btn-bg .3s ease-in-out;

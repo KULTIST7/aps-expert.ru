@@ -1,0 +1,36 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        
+        span, i {
+            font-weight: 400;
+            font-size: 1.4rem;
+            color: #2C4A58;
+            margin: 0;
+
+            @media #{$lg} {
+                font-size: 1.2rem;
+            }
+        }
+
+        &>span {
+            color: #79A1B4;
+        }
+
+        i {
+            padding: 0 1.2rem;
+
+            @media #{$lg} {
+                padding: 0 0.3rem;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}

@@ -44,6 +44,10 @@ body {
         margin: 0;
     }
 
+    main {
+        min-height: calc(100dvh - 43.4rem);
+    }
+
     h1, h2, h3, h4 {
         font-weight: 600;
         color: #000;
