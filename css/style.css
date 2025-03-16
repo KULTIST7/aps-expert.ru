@@ -4611,12 +4611,14 @@ body a {
   filter: grayscale(1);
   opacity: 0.5;
   transition: all 0.1s linear;
+  cursor: pointer;
 }
 .product__thumbs .swiper-slide-thumb-active {
   background-color: #F9FAFD;
   padding: 0;
   opacity: 1;
   filter: none;
+  cursor: default;
 }
 .product__thumbs .swiper-slide img {
   max-width: 100%;
@@ -4667,6 +4669,7 @@ body a {
 }
 .product__slider__prev.swiper-button-disabled, .product__slider__next.swiper-button-disabled {
   filter: grayscale(1);
+  cursor: default;
 }
 .product__slider__prev {
   transform: translateY(-50%) rotateY(180deg);
