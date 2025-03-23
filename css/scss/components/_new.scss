@@ -1,0 +1,21 @@
+.new {
+    .detail-page {
+        &__text {
+            &, p, ul>li {
+                line-height: 2.5rem;
+
+                @media #{$lg} {
+                    line-height: 2.2rem;
+                }
+            }
+        }
+    }
+
+    &>.section-box>.detail-page__text {
+        margin-bottom: 4.5rem;
+
+        @media #{$lg} {
+            margin-bottom: 4rem;
+        }
+    }
+}

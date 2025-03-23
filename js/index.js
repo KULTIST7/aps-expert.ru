@@ -513,4 +513,34 @@ $(document).ready(function () {
             }
         });
     }
+
+    if ($('.gallery:not(.gallery_list)').length) {
+        const gallerySlider = new Swiper('.gallery .swiper', {
+            speed: 500,
+            spaceBetween: 20,
+            slidesPerView: 1.3,
+            breakpoints: {
+                993: {
+                    spaceBetween: 30,
+                    slidesPerView: 4
+                },
+    
+                769: {
+                    slidesPerView: 2
+                }
+            }
+        });
+    }
+
+    if ($('.gallery_list').length) {
+        $('.gallery__open').on('click', function () {
+            $(this).closest('.gallery_list').addClass('opened');
+        });
+    }
+
+    if ($('.clients').length) {
+        $('.clients__open').on('click', function () {
+            $(this).closest('.clients').addClass('opened');
+        });
+    }
 });

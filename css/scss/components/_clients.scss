@@ -1,0 +1,136 @@
+.clients {
+    margin-bottom: 12rem;
+
+    @media #{$lg} {
+        margin-bottom: 9.5rem;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: #000;
+        margin: 0 0 7rem;
+
+        @media #{$lg} {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        @media #{$lg} {
+            gap: 2rem;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+        height: auto;
+        aspect-ratio: 230 / 152;
+        background-color: #fff;
+        border-radius: 2rem;
+
+        @media #{$lg} {
+            width: 22.95%;
+        }
+
+        @media #{$md} {
+            display: none;
+            width: 48.15%;
+        }
+
+        @media #{$sm} {
+            width: 47%;
+        }
+
+        &:nth-of-type(-n+16) {
+            @media #{$md} {
+                display: flex;
+            }
+        }
+
+        a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &__open {
+        font-size: 1.4rem;
+        line-height: 4.6rem;
+        color: #91A2AB;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        width: 100%;
+        background-color: #fff;
+        border: none;
+        border-radius: 0.5rem 2.5rem;
+        cursor: pointer;
+        transition: all .1s linear;
+
+        @media #{$md} {
+            display: flex;
+        }
+
+        &:hover {
+            color: $color-active;
+
+            svg {
+                path {
+                    fill: $color-active;
+                }
+            }
+        }
+
+        span {
+            font-size: 1.4rem;
+            line-height: 4.6rem;
+            color: $color-active;
+        }
+
+        svg {
+            width: 1.6rem;
+            height: 1.6rem;
+
+            path {
+                transition: all .1s linear;
+            }
+        }
+    }
+
+    &.opened {
+        .clients {
+            &__item {
+                @media #{$md} {
+                    display: flex;
+                }
+            }
+
+            &__open {
+                display: none;
+            }
+        }
+    }
+}

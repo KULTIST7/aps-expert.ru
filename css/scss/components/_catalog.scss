@@ -215,6 +215,8 @@
                 }
 
                 ul {
+                    max-width: 20rem;
+
                     @media #{$lg} {
                         display: initial;
                     }
@@ -222,7 +224,6 @@
                     li {
                         a {
                             color: $color-active-tertiary;
-                            max-width: 20rem;
 
                             @media #{$lg} {
                                 line-height: 1.4rem;

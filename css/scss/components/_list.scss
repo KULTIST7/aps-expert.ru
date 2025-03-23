@@ -127,4 +127,66 @@
             }
         }
     }
+
+    &_detail {
+        .list {
+            &__content {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 5rem 3rem;
+                margin-bottom: 4rem;
+
+                @media #{$md} {
+                    width: 100%;
+                }
+            }
+
+            &__item {
+                width: 23.5%;
+
+                @media #{$lg} {
+                    width: 47.95%;
+                }
+
+                @media #{$md} {
+                    width: 100%;
+                }
+
+                &:hover {
+                    .list__item__image {
+                        img {
+                            opacity: 1;
+                            filter: none;
+                        }
+                    }
+                }
+
+                &__image {
+                    @media #{$lg} {
+                        aspect-ratio: 36 / 20;
+                    }
+
+                    img {
+                        opacity: 0.7;
+                        filter: grayscale(1);
+                        transition: all .1s linear;
+
+                        @media #{$lg} {
+                            opacity: 1;
+                            filter: none;
+                        }
+                    }
+                }
+            }
+
+            &__pagination {
+                .pagination {
+                    &__num {
+                        width: 23.5%;
+                    }
+                }
+            }
+        }
+    }
 }
